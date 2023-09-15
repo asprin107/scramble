@@ -1,0 +1,15 @@
+prometheus:
+  resources:
+    limits:
+      cpu: "1000m"
+      memory: "2048Mi"
+    requests:
+      cpu: "1000m"
+      memory: "2048Mi"
+  server:
+    serviceAccounts:
+      roleArn: ${prometheus_role_arn}
+    persistentVolume:
+      storageClass: efs-sc
+      volumeName: efs-prometheus
+      size: ${volume_size}

@@ -1,0 +1,7 @@
+prometheus:
+  pv:
+    spec:
+      capacity:
+        storage: ${storage_size}
+      csi:
+        volumeHandle: ${efs_id}

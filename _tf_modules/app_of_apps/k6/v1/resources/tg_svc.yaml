@@ -1,0 +1,18 @@
+grafana:
+  listen_port: 81
+  service_port: 81
+  service_name: grafana
+  public_access: true
+  namespace: monitoring
+influxdb:
+  listen_port: 82
+  service_port: 82
+  service_name: influxdb
+  public_access: false
+  namespace: monitoring
+prometheus:
+  listen_port: 83
+  service_port: 83
+  service_name: prometheus-server
+  public_access: false
+  namespace: monitoring

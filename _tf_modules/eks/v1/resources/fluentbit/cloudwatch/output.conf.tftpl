@@ -1,0 +1,8 @@
+[OUTPUT]
+  Name cloudwatch_logs
+  Match   kube.*
+  region ${aws_region}
+  log_group_name my-logs
+  log_stream_prefix from-fluent-bit-
+  log_retention_days 60
+  auto_create_group true
